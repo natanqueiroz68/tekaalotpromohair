@@ -650,15 +650,15 @@
       <!-- PRODUTO -->
       <div class="product-row">
         <div class="product-thumb-box">
-          <img id="trackProductImg" class="product-thumb" src="images/defy-dss554-01.png" alt="Defy 50cm DSS554 Compact Stove with 4 Solid Plates &amp; Electric Oven" onerror="this.src='images/defy-dss554-main.png'" />
+          <img id="trackProductImg" class="product-thumb" src="images/ghd-max-01.png" alt="ghd Max - Professional Wide Plate Hair Straightener (Black)" onerror="this.src='images/ghd-max-main.png'" />
         </div>
 
         <div class="product-info">
           <div class="product-title" id="trackProductTitle">
-            Defy 50cm DSS554 Compact Stove with 4 Solid Plates &amp; Electric Oven
+            ghd Max - Professional Wide Plate Hair Straightener
           </div>
           <div class="product-meta" id="trackProductMeta">
-            Black &bull; 4-Plate Solid Hob &bull; PLID92851832
+            Black &bull; 42mm Wide Plates &bull; PLID72159098
           </div>
 
           <div class="product-price-line">
@@ -950,16 +950,12 @@
               }
 
               // Product Image
-              if (order.product_image) {
-                var imgEl = document.getElementById('trackProductImg');
-                if (imgEl) { imgEl.src = order.product_image; imgEl.onerror = null; }
-              }
+              var imgEl = document.getElementById('trackProductImg');
+              if (imgEl) { imgEl.src = 'images/ghd-max-01.png'; }
 
               // Product Title
-              if (order.product_title) {
-                var titleEl = document.getElementById('trackProductTitle');
-                if (titleEl) titleEl.textContent = order.product_title;
-              }
+              var titleEl = document.getElementById('trackProductTitle');
+              if (titleEl) titleEl.textContent = 'ghd Max - Professional Wide Plate Hair Straightener';
 
               // Price
               if (order.total_amount_formatted) {
@@ -1036,7 +1032,7 @@
         if (addrEl) addrEl.textContent = 'Your Home - Your Address';
 
         var imgEl = document.getElementById('trackProductImg');
-        if (imgEl) imgEl.src = 'images/defy-dss554-01.png';
+        if (imgEl) imgEl.src = 'images/ghd-max-01.png';
 
         updateStatusBadge('PROCESSING');
       } catch(e) {

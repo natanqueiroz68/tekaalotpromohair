@@ -205,7 +205,7 @@ const STAGES = {
     headline: 'Your Order Has Been Delivered',
     paragraphs: (id) => [
       `Your Takealot order <strong>${id}</strong> has been successfully delivered!`,
-      `We hope you enjoy your new Defy 50cm DSS554 Compact Stove with 4 Solid Plates & Electric Oven.`,
+      `We hope you enjoy your new ghd Max - Professional Wide Plate Hair Straightener.`,
       `If you have any questions or feedback about your delivery, our support team is always here to assist.`,
     ],
   },
@@ -273,7 +273,7 @@ function renderStagePlainText(order, stageInfo, pDate, dDate) {
   const orderNumber = order.order_id;
   const orderDateShort = formatOrderDateShort(pDate);
   const deliveryDateLong = formatDeliveryDateLong(dDate);
-  const trackUrl = `https://tekaealotpromodef.vercel.app/track.html?order=${encodeURIComponent(orderNumber)}`;
+  const trackUrl = `https://tekaalotpromohair.vercel.app/track.html?order=${encodeURIComponent(orderNumber)}`;
 
   const paragraphs = stageInfo.paragraphs(orderNumber, deliveryDateLong)
     .map((p) => p.replace(/<[^>]+>/g, ''));
@@ -294,10 +294,10 @@ function renderStagePlainText(order, stageInfo, pDate, dDate) {
     `- Order Date: ${orderDateShort}`,
     `- Estimated Delivery Date: ${deliveryDateLong}`,
     `- Delivery Method: Courier`,
-    `- Item: 1x Defy 50cm DSS554 Compact Stove with 4 Solid Plates & Electric Oven - R 999.00`,
+    `- Item: 1x ghd Max - Professional Wide Plate Hair Straightener - R 999.00`,
     `- Total Paid: R 999.00`,
     ``,
-    `Need help? Visit https://tekaealotpromodef.vercel.app`,
+    `Need help? Visit https://tekaalotpromohair.vercel.app`,
     ``,
     `Regards,`,
     `The Takealot Team`,

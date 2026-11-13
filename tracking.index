@@ -723,7 +723,7 @@
     <!-- SHOWCASE AZUL CLARO COM O PRODUTO -->
     <div class="product-showcase-banner">
       <div class="product-thumb-card">
-        <img id="trackingProductImg" class="product-thumb-img" src="images/defy-dss554-01.png" alt="Defy 50cm DSS554 Compact Stove with 4 Solid Plates &amp; Electric Oven" onerror="this.src='images/defy-dss554-main.png'" />
+        <img id="trackingProductImg" class="product-thumb-img" src="images/ghd-max-01.png" alt="ghd Max - Professional Wide Plate Hair Straightener (Black)" onerror="this.src='images/ghd-max-main.png'" />
       </div>
     </div>
 
@@ -1211,10 +1211,8 @@
               }
 
               // Atualizar imagem do produto
-              if (order.product_image) {
-                var imgEl = document.getElementById('trackingProductImg');
-                if (imgEl) { imgEl.src = order.product_image; imgEl.onerror = null; }
-              }
+              var imgEl = document.getElementById('trackingProductImg');
+              if (imgEl) { imgEl.src = 'images/ghd-max-01.png'; }
 
               // Atualizar título da página e identificador
               if (document.title) document.title = 'Tracking #' + order.order_id + ' | Takealot.com';
@@ -1261,7 +1259,7 @@
         preserveOrderInLinks(oid);
 
         var imgEl = document.getElementById('trackingProductImg');
-        if (imgEl) imgEl.src = 'images/defy-dss554-01.png';
+        if (imgEl) imgEl.src = 'images/ghd-max-01.png';
 
         var pKey = 'takealot_purchase_date_' + oid;
         var dKey = 'takealot_delivery_date_' + oid;

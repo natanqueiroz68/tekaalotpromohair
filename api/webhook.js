@@ -7,7 +7,7 @@
 //   UPSTASH_REDIS_REST_TOKEN  Upstash REST token
 //   WEBHOOK_SECRET            signing secret from paw-house.shop webhook settings
 //   PRODUCT_IMAGE_DEFAULT     fallback product image URL
-//   PRODUCT_IMAGE_DM_ZWBAEY8PII   image URL for the Defy DSS554 Stove product
+//   PRODUCT_IMAGE_DM_ZWBAEY8PII   image URL for the ghd Max Hair Straightener product
 //
 // Paw House sends:  X-Paw-House-Signature: <hmac-sha256-hex>
 // Signature is computed by Paw House as:  HMAC-SHA256(rawBody, signingSecret)
@@ -149,7 +149,7 @@ function renderOrderPlainText(order) {
   const customerName = order.customer_name || 'Customer';
   const orderNumber = order.order_id;
   const variant = 'Black';
-  const trackUrl = `https://tekaealotpromodef.vercel.app/track.html?order=${orderNumber}`;
+  const trackUrl = `https://tekaalotpromohair.vercel.app/track.html?order=${orderNumber}`;
 
   return [
     `TAKEALOT PAYMENT CONFIRMATION`,
@@ -171,7 +171,7 @@ function renderOrderPlainText(order) {
     `- Delivery Method: Courier`,
     ``,
     `ITEMS IN THIS ORDER:`,
-    `- 1x Defy 50cm DSS554 Compact Stove with 4 Solid Plates & Electric Oven - R 999.00`,
+    `- 1x ghd Max - Professional Wide Plate Hair Straightener - R 999.00`,
     ``,
     `PAYMENT SUMMARY:`,
     `- Subtotal: R 999.00`,
@@ -181,7 +181,7 @@ function renderOrderPlainText(order) {
     `TRACK YOUR ORDER:`,
     `${trackUrl}`,
     ``,
-    `Need help? Find answers at https://tekaealotpromodef.vercel.app`,
+    `Need help? Find answers at https://tekaalotpromohair.vercel.app`,
     ``,
     `Regards,`,
     `The Takealot Team`,
@@ -484,7 +484,7 @@ async function handler(req, res) {
   const productName  = item.title || item.name || item.productName || item.product_title
                     || (payload.product && payload.product.name)
                     || payload.productTitle || payload.product_title
-                    || 'Defy 50cm DSS554 Compact Stove with 4 Solid Plates & Electric Oven';
+                    || 'ghd Max - Professional Wide Plate Hair Straightener';
   const productPrice = item.totalPrice != null
                     ? item.totalPrice
                     : (item.price != null ? item.price : (payload.amount != null ? payload.amount : 999));
@@ -494,7 +494,7 @@ async function handler(req, res) {
   const envKey       = productId
                     ? 'PRODUCT_IMAGE_' + productId.replace(/[^A-Z0-9]/gi, '_').toUpperCase()
                     : '';
-  const productImage = (envKey && process.env[envKey]) || process.env.PRODUCT_IMAGE_DEFAULT || 'https://tekaealotpromodef.vercel.app/images/defy-dss554-01.png';
+  const productImage = (envKey && process.env[envKey]) || process.env.PRODUCT_IMAGE_DEFAULT || 'https://tekaalotpromohair.vercel.app/images/ghd-max-01.png';
 
   const now = new Date().toISOString();
 
@@ -540,7 +540,7 @@ async function handler(req, res) {
     delivery_date_long:      (existing && existing.delivery_date_long) || dates.delivery_date_long,
     delivery_date_iso:       (existing && existing.delivery_date_iso) || dates.delivery_date_iso,
     // Tracking URL: dynamic with real ID
-    tracking_url:   'https://tekaealotpromodef.vercel.app/track.html?order=' + encodeURIComponent(orderId),
+    tracking_url:   'https://tekaalotpromohair.vercel.app/track.html?order=' + encodeURIComponent(orderId),
     // Status
     status: (existing && existing.status) || 'PROCESSING',
     status_history: (existing && existing.status_history) || [
