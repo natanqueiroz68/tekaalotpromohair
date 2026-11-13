@@ -171,12 +171,12 @@ function renderOrderPlainText(order) {
     `- Delivery Method: Courier`,
     ``,
     `ITEMS IN THIS ORDER:`,
-    `- 1x ghd Max - Professional Wide Plate Hair Straightener - R 999.00`,
+    `- 1x ghd Max - Professional Wide Plate Hair Straightener - R 497.00`,
     ``,
     `PAYMENT SUMMARY:`,
-    `- Subtotal: R 999.00`,
+    `- Subtotal: R 497.00`,
     `- Shipping: Free`,
-    `- Total Paid: R 999.00`,
+    `- Total Paid: R 497.00`,
     ``,
     `TRACK YOUR ORDER:`,
     `${trackUrl}`,
@@ -487,7 +487,7 @@ async function handler(req, res) {
                     || 'ghd Max - Professional Wide Plate Hair Straightener';
   const productPrice = item.totalPrice != null
                     ? item.totalPrice
-                    : (item.price != null ? item.price : (payload.amount != null ? payload.amount : 999));
+                    : (item.price != null ? item.price : (payload.amount != null ? payload.amount : 497));
   const currency     = item.currency || payload.currency || 'ZAR';
 
   // Product image: per-product env var or default
