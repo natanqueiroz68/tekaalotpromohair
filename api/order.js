@@ -17,12 +17,12 @@ const REDIS_URL   = process.env.UPSTASH_REDIS_REST_KV_REST_API_URL
   || process.env.UPSTASH_REDIS_REST_URL
   || process.env.KV_REST_API_URL
   || process.env.REDIS_URL
-  || 'https://lucky-stud-100447.upstash.io';
+  || 'https://cuddly-vervet-201826.upstash.io';
 const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_KV_REST_API_TOKEN
   || process.env.UPSTASH_REDIS_REST_TOKEN
   || process.env.KV_REST_API_TOKEN
   || process.env.REDIS_TOKEN
-  || 'gQAAAAAAAYhfAAIgcDFhY2Y1MzNhZjlmOGI0NWVmYWZiOTczZGUyZjM2MGE0OQ';
+  || 'gQAAAAAAAxRiAAIgcDFiZjI5N2Y1NDA0NTg0MmEwOWZhODdlZDQ5Njc0NGQxZg';
 
 const fs = require('fs');
 const path = require('path');
