@@ -378,7 +378,7 @@ module.exports = async function handler(req, res) {
         customer_name: (req.query.name || 'Customer').trim(),
         customer_email: (req.query.to || req.query.email || '').trim(),
         customer_phone: '',
-        product_id: 'dm-zwbwey8pii',
+        product_id: 'dm-821tli1dps',
         product_name: 'ghd Max - Professional Wide Plate Hair Straightener',
         product_price: 497,
         currency: 'ZAR',
